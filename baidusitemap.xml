@@ -3,137 +3,23 @@
 
 
     
-    
-    
   <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Zabbix-3-x-Install/</loc>
-    <lastmod>2017-04-11T15:12:11.000Z</lastmod>
+    <loc>http://www.cxlg34.com/2017/04/16/Hexo%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2017-04-16T11:58:31.697Z</lastmod>
     <data>
         <display>
-        <title>Zabbix 3.x Install</title>
-        <pubTime>2017-04-11T15:05:15.000Z</pubTime>
+        <title>Hexo搭建及配置</title>
+        <pubTime>2017-04-16T10:41:57.000Z</pubTime>
         
-        <tag>ZABBIX Install</tag>
-         
-        <tag>ZABBIX安装</tag>
-         
          
            
              
-              <breadCrumb title="ZABBIX" url="http://www.cxlg34.com/categories/ZABBIX/"/>
+              <breadCrumb title="-Hexo -install" url="http://www.cxlg34.com/categories/Hexo-install/"/>
           
         </display>
     </data>
     </url>
 
     
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Rsync-Data-Synchronization/</loc>
-    <lastmod>2017-04-11T15:03:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>Rsync Data Synchronization</title>
-        <pubTime>2017-04-11T15:02:35.000Z</pubTime>
-        
-        <tag>Rsync</tag>
-         
-        <tag>数据同步</tag>
-         
-        <tag>单独用户给目录添加特殊权限</tag>
-         
-        <tag>无交互备份</tag>
-         
-        <tag>SSH密钥</tag>
-         
-        <tag>增量备份</tag>
-         
-        <tag>文件打包</tag>
-         
-        <tag>后台运行</tag>
-         
-         
-           
-             
-              <breadCrumb title="LINUX" url="http://www.cxlg34.com/categories/LINUX/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/LVM-Disk-Extension/</loc>
-    <lastmod>2017-04-11T15:00:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>LVM Disk Extension</title>
-        <pubTime>2017-04-11T14:59:34.000Z</pubTime>
-        
-        <tag>LVM</tag>
-         
-        <tag>逻辑卷</tag>
-         
-        <tag>磁盘扩容</tag>
-         
-         
-           
-             
-              <breadCrumb title="LINUX" url="http://www.cxlg34.com/categories/LINUX/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Install-Zabbix-Agent/</loc>
-    <lastmod>2017-04-11T14:51:07.000Z</lastmod>
-    <data>
-        <display>
-        <title>Install Zabbix Agent</title>
-        <pubTime>2017-04-11T14:44:21.000Z</pubTime>
-        
-        <tag>ZABBIX</tag>
-         
-        <tag>Agent</tag>
-         
-        <tag>监控客户端安装</tag>
-         
-        <tag>zabbix-agent</tag>
-         
-         
-           
-             
-              <breadCrumb title="ZABBIX" url="http://www.cxlg34.com/categories/ZABBIX/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Fuel-OpenSrack-9-0/</loc>
-    <lastmod>2017-04-11T14:45:52.000Z</lastmod>
-    <data>
-        <display>
-        <title>Fuel-OpenSrack-9-0</title>
-        <pubTime>2017-04-11T13:41:35.000Z</pubTime>
-        
-        <tag>OpenStack M</tag>
-         
-        <tag>Fuel OpenStack 9.0</tag>
-         
-        <tag>Fuel 9.0</tag>
-         
-        <tag>Mirantis</tag>
-         
-         
-           
-             
-              <breadCrumb title="OpenStack" url="http://www.cxlg34.com/categories/OpenStack/"/>
-          
-        </display>
-    </data>
-    </url>
-
 </urlset>

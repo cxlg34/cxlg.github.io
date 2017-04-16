@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.cxlg34.com/2017/04/16/Hexo%E6%90%AD%E5%BB%BA%E5%8F%8A%E9%85%8D%E7%BD%AE/</loc>
+    
+    <lastmod>2017-04-16T11:58:31.697Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.cxlg34.com/categories/index.html</loc>
     
     <lastmod>2017-04-15T09:15:12.691Z</lastmod>
@@ -12,41 +19,6 @@
     <loc>http://www.cxlg34.com/tags/index.html</loc>
     
     <lastmod>2017-04-15T08:24:24.701Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Zabbix-3-x-Install/</loc>
-    
-    <lastmod>2017-04-11T15:12:11.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Rsync-Data-Synchronization/</loc>
-    
-    <lastmod>2017-04-11T15:03:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/LVM-Disk-Extension/</loc>
-    
-    <lastmod>2017-04-11T15:00:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Install-Zabbix-Agent/</loc>
-    
-    <lastmod>2017-04-11T14:51:07.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.cxlg34.com/2017/04/11/Fuel-OpenSrack-9-0/</loc>
-    
-    <lastmod>2017-04-11T14:45:52.000Z</lastmod>
     
   </url>
   

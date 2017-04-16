@@ -106,7 +106,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    sidebar: {"position":"right","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/11/Zabbix-3-x-Install/">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/16/Hexo搭建及配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="从心来过">
@@ -318,8 +318,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/11/Zabbix-3-x-Install/" itemprop="url">
-                  Zabbix 3.x Install
+                <a class="post-title-link" href="/2017/04/16/Hexo搭建及配置/" itemprop="url">
+                  Hexo搭建及配置
                 </a>
               
             
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T23:05:15+08:00">
-                2017-04-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-16T18:41:57+08:00">
+                2017-04-16
               </time>
             
 
@@ -358,8 +358,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ZABBIX/" itemprop="url" rel="index">
-                    <span itemprop="name">ZABBIX</span>
+                  <a href="/categories/Hexo-install/" itemprop="url" rel="index">
+                    <span itemprop="name">-Hexo -install</span>
                   </a>
                 </span>
 
@@ -394,614 +394,11 @@
 
       
         
-          <h4 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h4><figure class="highlight perl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]<span class="comment"># systemctl disable firewalld.service</span></div><div class="line">Removed <span class="keyword">symlink</span> /etc/systemd/<span class="keyword">system</span>/dbus-org.fedoraproject.FirewallD1.service.</div><div class="line">Removed <span class="keyword">symlink</span> /etc/systemd/<span class="keyword">system</span>/basic.target.wants/firewalld.service.</div></pre></td></tr></table></figure>
-<h4 id="关闭selinux"><a href="#关闭selinux" class="headerlink" title="关闭selinux"></a>关闭selinux</h4><figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="section">[root@localhost ~]</span><span class="comment"># cat /etc/sysconfig/selinux </span></div><div class="line"></div><div class="line"><span class="comment"># This file controls the state of SELinux on the system.</span></div><div class="line"><span class="comment"># SELINUX= can take one of these three values:</span></div><div class="line"><span class="comment">#     enforcing - SELinux security policy is enforced.</span></div><div class="line"><span class="comment">#     permissive - SELinux prints warnings instead of enforcing.</span></div><div class="line"><span class="comment">#     disabled - No SELinux policy is loaded.</span></div><div class="line"><span class="attr">SELINUX</span>=disabled</div><div class="line"><span class="comment"># SELINUXTYPE= can take one of three two values:</span></div><div class="line"><span class="comment">#     targeted - Targeted processes are protected,</span></div><div class="line"><span class="comment">#     minimum - Modification of targeted policy. Only selected processes are protected. </span></div><div class="line"><span class="comment">#     mls - Multi Level Security protection.</span></div><div class="line"><span class="attr">SELINUXTYPE</span>=targeted</div></pre></td></tr></table></figure>
+          <h2 id="安装Node-js-Git-Hexo"><a href="#安装Node-js-Git-Hexo" class="headerlink" title="安装Node.js Git Hexo"></a>安装Node.js Git Hexo</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo -g </div><div class="line">hexo init</div></pre></td></tr></table></figure>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">hexo</span> <span class="comment">init</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">初始化站点</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">new</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">发布新文章</span> <span class="comment">如果标题有空格，需要用引号标注</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">产生静态页面</span></div><div class="line">     <span class="literal">-</span><span class="comment">d</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span> <span class="comment">产生页面的同时发布网页</span></div><div class="line">     <span class="literal">-</span><span class="comment">w</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span>  <span class="comment">查看文件变化</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">publish</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">发布一个模板</span>  <span class="comment">draft</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">server</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">启动hexo本地服务</span></div><div class="line">     <span class="literal">-</span><span class="comment">p</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">port</span>     <span class="comment">指定端口</span></div><div class="line">     <span class="literal">-</span><span class="comment">s</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">static</span>   <span class="comment">只发布静态文件</span></div><div class="line">     <span class="literal">-</span><span class="comment">l</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">log</span>      <span class="comment">开启logger</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">deploy</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">发布站点</span></div><div class="line">     <span class="literal">-</span><span class="comment">g</span>       <span class="comment">先产生静态文件</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">render</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">渲染文件</span> </div><div class="line"><span class="comment">hexo</span> <span class="comment">migrate</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">迁移到其他blog系统</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">list</span>     <span class="literal">-</span><span class="literal">-</span><span class="comment">列出指定内容</span> </div><div class="line">          <span class="comment">post</span></div><div class="line">          <span class="comment">page</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">safe</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">禁用插件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">slient</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">禁止输出信息</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">config</span> <span class="comment">custom</span><span class="string">.</span><span class="comment">yml</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">指定配置文件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">cwd</span>    <span class="literal">-</span><span class="literal">-</span><span class="comment">指定工作目录</span></div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/Zabbix-3-x-Install/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/11/Rsync-Data-Synchronization/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/11/Rsync-Data-Synchronization/" itemprop="url">
-                  Rsync Data Synchronization
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T23:02:35+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LINUX/" itemprop="url" rel="index">
-                    <span itemprop="name">LINUX</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="安装程序"><a href="#安装程序" class="headerlink" title="安装程序"></a>安装程序</h2><p><code>yum install -y rsync xinetd</code></p>
-<h2 id="激活rsync"><a href="#激活rsync" class="headerlink" title="激活rsync"></a>激活rsync</h2><p><code>vim /etc/xinetd.d/rsync</code><br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">service rsync</div><div class="line">&#123;</div><div class="line">        <span class="attr">disable</span> = no</div><div class="line">        <span class="attr">flags</span>           = IPv6</div><div class="line">        <span class="attr">socket_type</span>     = stream</div><div class="line">        <span class="attr">wait</span>            = no</div><div class="line">        <span class="attr">user</span>            = root</div><div class="line">        <span class="attr">server</span>          = /usr/bin/rsync</div><div class="line">        <span class="attr">server_args</span>     = --daemon</div><div class="line">        log_on_failure  += USERID</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/Rsync-Data-Synchronization/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/11/LVM-Disk-Extension/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/11/LVM-Disk-Extension/" itemprop="url">
-                  LVM Disk Extension
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T22:59:34+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LINUX/" itemprop="url" rel="index">
-                    <span itemprop="name">LINUX</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="LVM-磁盘扩容"><a href="#LVM-磁盘扩容" class="headerlink" title="LVM 磁盘扩容"></a>LVM 磁盘扩容</h4><blockquote>
-<ol>
-<li>磁盘扩容前磁盘状态查看</li>
-<li>添加一个15G的硬盘扩容</li>
-<li>物理卷</li>
-<li>卷组</li>
-<li>逻辑卷</li>
-<li>挂载</li>
-</ol>
-<h3 id="磁盘扩容前磁盘状态查看"><a href="#磁盘扩容前磁盘状态查看" class="headerlink" title="磁盘扩容前磁盘状态查看"></a>磁盘扩容前磁盘状态查看</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">[root@localhost ~]# df -HT</div><div class="line">Filesystem                   Type   Size  Used Avail Use% Mounted on</div><div class="line">/dev/mapper/VolGroup-lv_root ext4    <span class="number">14</span>G  <span class="number">4.1</span>G  <span class="number">9.1</span>G  <span class="number">31</span>% /</div><div class="line">tmpfs                        tmpfs  <span class="number">1.9</span>G  <span class="number">234</span>k  <span class="number">1.9</span>G   <span class="number">1</span>% /dev/shm</div><div class="line">/dev/sda1                    ext4   <span class="number">508</span>M   <span class="number">41</span>M  <span class="number">441</span>M   <span class="number">9</span>% /boot</div></pre></td></tr></table></figure>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/LVM-Disk-Extension/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/11/Install-Zabbix-Agent/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/11/Install-Zabbix-Agent/" itemprop="url">
-                  Install Zabbix Agent
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T22:44:21+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/ZABBIX/" itemprop="url" rel="index">
-                    <span itemprop="name">ZABBIX</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Installing-Zabbix-Agent"><a href="#Installing-Zabbix-Agent" class="headerlink" title="Installing Zabbix Agent"></a>Installing Zabbix Agent</h2><p>Follow the below instructions to install Zabbix Agent on CentOS, RHEL 7/6/5 systems.<br>Step 1 – Add Required Repository</p>
-<p>Before installing Zabbix Agent first configure zabbix yum repository using following commands as per your required version and operating system.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">CentOS/RHEL <span class="number">7</span>:</div><div class="line"><span class="meta"># rpm -Uvh http:<span class="comment">//repo.zabbix.com/zabbix/3.0/rhel/7/x86_64/zabbix-release-3.0-1.el7.noarch.rpm</span></span></div><div class="line"></div><div class="line">CentOS/RHEL <span class="number">6</span>:</div><div class="line"><span class="meta"># rpm -Uvh http:<span class="comment">//repo.zabbix.com/zabbix/3.0/rhel/6/x86_64/zabbix-release-3.0-1.el6.noarch.rpm</span></span></div><div class="line"></div><div class="line">CentOS/RHEL <span class="number">5</span>:</div><div class="line"><span class="meta"># rpm -Uvh http:<span class="comment">//repo.zabbix.com/zabbix/3.0/rhel/5/x86_64/zabbix-release-3.0-1.el5.noarch.rpm</span></span></div></pre></td></tr></table></figure></p>
-<p>Step 2 – Install Zabbix Agent</p>
-<p>After installing yum repository packages in our system. Now use following command to install Zabbix agent on your Linux system.<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># yum install zabbix zabbix-agent</span></div></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/Install-Zabbix-Agent/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/11/Fuel-OpenSrack-9-0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/04/11/Fuel-OpenSrack-9-0/" itemprop="url">
-                  Fuel-OpenSrack-9-0
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-11T21:41:35+08:00">
-                2017-04-11
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/OpenStack/" itemprop="url" rel="index">
-                    <span itemprop="name">OpenStack</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h1 id="Fuel-OpenSrack-9-0"><a href="#Fuel-OpenSrack-9-0" class="headerlink" title="Fuel OpenSrack 9.0"></a>Fuel OpenSrack 9.0</h1><h2 id="制作离线源"><a href="#制作离线源" class="headerlink" title="制作离线源"></a>制作离线源</h2><p><strong>下载离线源</strong><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">local<span class="variable">@Dell</span><span class="symbol">:~/</span>下载/Fuel OpenStack/<span class="number">9.0</span><span class="variable">$ </span>ls</div><div class="line">bootstraps  bootstraps.zip  MirantisOpenStack-<span class="number">9.0</span>.iso  mirrors  mirrors.zip</div></pre></td></tr></table></figure></p>
-<p><strong>上传至配置好的部署节点</strong><br><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">local<span class="variable">@Dell</span><span class="symbol">:~/</span>下载/Fuel OpenStack/<span class="number">9.0</span><span class="variable">$ </span>scp -r bootstraps mirrors root<span class="variable">@10</span>.<span class="number">20.0</span>.<span class="number">2</span><span class="symbol">:/var/www/nailgun/</span></div><div class="line"></div><div class="line">local<span class="variable">@Dell</span><span class="symbol">:~</span><span class="variable">$ </span>ssh root<span class="variable">@10</span>.<span class="number">20.0</span>.<span class="number">2</span></div><div class="line">root<span class="variable">@10</span>.<span class="number">20.0</span>.<span class="number">2</span><span class="string">'s password: </div><div class="line">Last login: Tue Oct 11 06:08:42 2016</div><div class="line"></div><div class="line">[root@fuel ~]# cd /var/www/nailgun/</div><div class="line"></div><div class="line">[root@fuel nailgun]# ls</div><div class="line">bootstraps  dump        extra-repos  mirrors     mos-centos    ubuntu</div><div class="line">centos      error.html  index.html   mitaka-9.0  targetimages</span></div></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/11/Fuel-OpenSrack-9-0/#more" rel="contents">
+            <a class="btn" href="/2017/04/16/Hexo搭建及配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1083,7 +480,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1094,21 +491,12 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
           
 
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">21</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
           
 
         </nav>
