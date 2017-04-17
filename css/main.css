@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0f470f;
+  background: #0b3d70;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2495,7 +2495,7 @@ pre .javascript .function {
   overflow: hidden;
   padding: 0;
   width: 240px;
-  background: #fff;
+  background: transparent;
   box-shadow: initial;
   border-radius: initial;
 }
@@ -2554,7 +2554,7 @@ pre .javascript .function {
   box-sizing: border-box;
   padding: 40px;
   width: 700px;
-  background: #fff;
+  background: transparent;
   min-height: 700px;
   box-shadow: initial;
   border-radius: initial;
@@ -2568,7 +2568,7 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .content-wrap {
-    width: 100%;
+    width: 50%;
     padding: 20px;
     min-height: auto;
     border-radius: initial;
@@ -2579,7 +2579,7 @@ pre .javascript .function {
   float: left;
   margin-top: 300px;
   width: 240px;
-  background: #f5f7f9;
+  background: transparent;
   box-shadow: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -2632,7 +2632,7 @@ pre .javascript .function {
 .site-meta {
   padding: 20px 0;
   color: #fff;
-  background: #222;
+  background: transparent;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .site-meta {
@@ -2688,7 +2688,7 @@ pre .javascript .function {
 }
 .menu .menu-item a:hover,
 .menu-item-active a {
-  background: #f9f9f9;
+  background: transparent;
   border-bottom-color: #fff;
 }
 .menu .menu-item br {
@@ -2703,7 +2703,7 @@ pre .javascript .function {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #bbb;
+  background-color: $black;
 }
 .btn-bar {
   background-color: #fff;
@@ -2736,7 +2736,7 @@ pre .javascript .function {
   box-sizing: border-box;
   width: 240px;
   color: #555;
-  background: #f5f5dc;
+  background: transparent;
   box-shadow: initial;
   border-radius: initial;
 }
@@ -2866,4 +2866,5 @@ pre .javascript .function {
 body {
   background: url("/images/background.jpg");
   background-attachment: fixed;
+  background-size: 100% 100%;
 }
