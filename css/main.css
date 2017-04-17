@@ -1692,7 +1692,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0b1295;
+  background: #5b40db;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2648,7 +2648,7 @@ pre .javascript .function {
   background: none;
 }
 .brand:hover {
-  color: #fff;
+  color: transparent;
 }
 .site-subtitle {
   margin: 10px 10px 0;
