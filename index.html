@@ -319,7 +319,7 @@
               
                 
                 <a class="post-title-link" href="/2017/05/17/KVM常用命令/" itemprop="url">
-                  未命名
+                  KVM常用命令
                 </a>
               
             
@@ -335,7 +335,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T14:13:13+08:00">
                 2017-05-17
               </time>
             
@@ -345,6 +345,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/KVM/" itemprop="url" rel="index">
+                    <span itemprop="name">KVM</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -372,9 +394,7 @@
 
       
         
-          <hr>
-<p>title: KVM常用命令<br>date: 2017-05-17 14:13:13<br>update: 2017-05-17 14:13:13<br>tags:<br>categories: </p>
-<h2 id="KVM"><a href="#KVM" class="headerlink" title="   - KVM"></a>   - KVM</h2><h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
+          <h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
 <h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-define-as vmdisk --<span class="built_in">type</span> <span class="built_in">dir</span> --target /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-build vmdisk</div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
@@ -1791,7 +1811,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

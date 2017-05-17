@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title></title>
+      <title><![CDATA[KVM常用命令]]></title>
       <url>%2F2017%2F05%2F17%2FKVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%2F</url>
-      <content type="text"><![CDATA[title: KVM常用命令date: 2017-05-17 14:13:13update: 2017-05-17 14:13:13tags:categories: - KVMKVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &gt; /kvmdump/ 创建存储池123mkdir /data/vol virsh pool-define-as vmdisk --type dir --target /data/vol virsh pool-build vmdisk]]></content>
+      <content type="text"><![CDATA[KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &gt; /kvmdump/ 创建存储池123mkdir /data/vol virsh pool-define-as vmdisk --type dir --target /data/vol virsh pool-build vmdisk]]></content>
     </entry>
 
     
