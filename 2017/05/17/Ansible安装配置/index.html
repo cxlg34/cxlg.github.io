@@ -89,15 +89,17 @@
 
 
 
-<meta name="description" content="都付笑谈中">
-<meta property="og:type" content="website">
+<meta name="description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
+<meta name="keywords">
+<meta property="og:type" content="article">
 <meta property="og:title" content="记忆博客">
-<meta property="og:url" content="http://www.cxlg34.com/archives/2017/04/index.html">
+<meta property="og:url" content="http://www.cxlg34.com/2017/05/17/Ansible安装配置/index.html">
 <meta property="og:site_name" content="记忆博客">
-<meta property="og:description" content="都付笑谈中">
+<meta property="og:description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
+<meta property="og:updated_time" content="2017-04-28T09:31:18.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记忆博客">
-<meta name="twitter:description" content="都付笑谈中">
+<meta name="twitter:description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
 
 
 
@@ -125,13 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://www.cxlg34.com/archives/2017/04/"/>
+  <link rel="canonical" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/"/>
 
 
 
 
 
-  <title> 归档 | 记忆博客 </title>
+  <title>  | 记忆博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -156,7 +158,7 @@
     
   
 
-  <div class="container sidebar-position-right  page-archive  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -284,66 +286,191 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 13 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
+
+      
+        <h2 id="Ansible-安装"><a href="#Ansible-安装" class="headerlink" title="Ansible 安装"></a>Ansible 安装</h2><p>控制主机所需组件：</p>
+<ol>
+<li>Python 2.6及以上版本</li>
+<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
+<li>PyYAML</li>
+<li>Jinja2</li>
+<li>httplib2(http客户端程序库)</li>
+</ol>
+<p>被管节点所需组件：</p>
+<ol>
+<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
+<li>Windows上需安装Powershell 3.0并授权远程管理</li>
+</ol>
+<h3 id="GitHub源码安装"><a href="#GitHub源码安装" class="headerlink" title="GitHub源码安装"></a>GitHub源码安装</h3><p>1.Github源码安装<br>yum install gcc libffi-devel python-devel openssl-devel<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/ansible/ansible.git --recursive </div><div class="line"><span class="keyword">cd</span> ./ansible</div><div class="line"><span class="keyword">source</span> ./hacking/env-setup</div><div class="line">(-q 静默模式)</div></pre></td></tr></table></figure></p>
+<ol>
+<li>需提前安装pip<br>easy_install pip </li>
+<li>安装控制主机需要的模块<br>pip install paramiko PyYAML Jinja2 httplib2 six cryptography</li>
+<li>运行env-setup脚本，ANSIBLE_HOSTS变量可以更改默认资源清单位置</li>
+<li>默认位置为/etc/ansible/hosts</li>
+</ol>
+<h3 id="更新Ansible"><a href="#更新Ansible" class="headerlink" title="更新Ansible"></a>更新Ansible</h3><ol>
+<li>git pull –rebase</li>
+<li>git submodule update –init –recursive<br>更新git中指向自身的模块</li>
+</ol>
+<h3 id="Ansible配置文件查找顺序"><a href="#Ansible配置文件查找顺序" class="headerlink" title="Ansible配置文件查找顺序"></a>Ansible配置文件查找顺序</h3><ol>
+<li>ANSIBLE_CONFIG </li>
+<li>./ansible.cfg</li>
+<li>~/.ansible.cfg</li>
+<li>/etc/ansible/ansible.cfg<br>(Github安装需要copy example目录下的ansible.cfg到相应目录)</li>
+</ol>
+<p>PYTHONPATH=/opt/ansible/lib<br>MANPATH=/opt/ansible/docs/man<br>export PYTHONPATH MANPATH</p>
+<h3 id="初试"><a href="#初试" class="headerlink" title="初试"></a>初试</h3><p>ansible 10.201.241.144 -m ping<br>如果不用密钥验证 需要添加-k 选项<br>需提前安装 sshpass<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m shell -<span class="selector-tag">a</span> <span class="string">'/bin/echo Hello,World!'</span> -<span class="selector-tag">i</span> /root/inventory<span class="selector-class">.cfg</span></div><div class="line">-m module </div><div class="line">-<span class="selector-tag">a</span> args</div></pre></td></tr></table></figure></p>
+<h3 id="列出ansible支持的系统模块"><a href="#列出ansible支持的系统模块" class="headerlink" title="列出ansible支持的系统模块"></a>列出ansible支持的系统模块</h3><p>ansible-doc -l </p>
+<h3 id="显示模块功能"><a href="#显示模块功能" class="headerlink" title="显示模块功能"></a>显示模块功能</h3><p>如shell 模块<br>ansible-doc shell<br>ansible-doc -s 简短描述</p>
+<h3 id="显示执行情况详细信息"><a href="#显示执行情况详细信息" class="headerlink" title="显示执行情况详细信息"></a>显示执行情况详细信息</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ansible -v -vvv</span></div></pre></td></tr></table></figure>
+<h3 id="列出inventory清单"><a href="#列出inventory清单" class="headerlink" title="列出inventory清单"></a>列出inventory清单</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ansible ostest <span class="comment">--list</span></div></pre></td></tr></table></figure>
+<h3 id="查看facts"><a href="#查看facts" class="headerlink" title="查看facts"></a>查看facts</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">setup</span> </div><div class="line">ansible ostest -m <span class="built_in">setup</span> -a <span class="string">'filter=ansible_all_ipv4_addresses'</span></div></pre></td></tr></table></figure>
+<h4 id="查看支持facter"><a href="#查看支持facter" class="headerlink" title="查看支持facter"></a>查看支持facter</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">shell</span> -<span class="keyword">a</span> <span class="string">'rpm -qa ruby-json facter'</span> </div><div class="line">ansible ostest -m facter</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
       
 
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/17/Mysql日志格式/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/17/Sql server 2008管理员必备指南笔记/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
         </div>
       
-      
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2017/04/16/Hexo搭建及配置/" itemprop="url">
-              
-                <span itemprop="name">Hexo搭建及配置</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-04-16T18:41:57+08:00"
-              content="2017-04-16" >
-          04-16
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -351,6 +478,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -370,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -442,6 +582,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ansible-安装"><span class="nav-number">1.</span> <span class="nav-text">Ansible 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub源码安装"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub源码安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新Ansible"><span class="nav-number">1.2.</span> <span class="nav-text">更新Ansible</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible配置文件查找顺序"><span class="nav-number">1.3.</span> <span class="nav-text">Ansible配置文件查找顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初试"><span class="nav-number">1.4.</span> <span class="nav-text">初试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出ansible支持的系统模块"><span class="nav-number">1.5.</span> <span class="nav-text">列出ansible支持的系统模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示模块功能"><span class="nav-number">1.6.</span> <span class="nav-text">显示模块功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示执行情况详细信息"><span class="nav-number">1.7.</span> <span class="nav-text">显示执行情况详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出inventory清单"><span class="nav-number">1.8.</span> <span class="nav-text">列出inventory清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看facts"><span class="nav-number">1.9.</span> <span class="nav-text">查看facts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看支持facter"><span class="nav-number">1.9.1.</span> <span class="nav-text">查看支持facter</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -554,11 +710,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
 
 
   

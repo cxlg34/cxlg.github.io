@@ -296,7 +296,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/16/Hexo搭建及配置/">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/KVM常用命令md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="从心来过">
@@ -318,8 +318,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/04/16/Hexo搭建及配置/" itemprop="url">
-                  Hexo搭建及配置
+                <a class="post-title-link" href="/2017/05/17/KVM常用命令md/" itemprop="url">
+                  未命名
                 </a>
               
             
@@ -335,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-16T18:41:57+08:00">
-                2017-04-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
               </time>
             
 
@@ -345,39 +345,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/install/" itemprop="url" rel="index">
-                    <span itemprop="name">install</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -405,15 +372,1240 @@
 
       
         
-          <h2 id="安装Node-js-Git-Hexo"><a href="#安装Node-js-Git-Hexo" class="headerlink" title="安装Node.js Git Hexo"></a>安装Node.js Git Hexo</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo -g </div><div class="line">hexo init</div></pre></td></tr></table></figure>
-<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">hexo</span> <span class="comment">init</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">初始化站点</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">new</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">发布新文章</span> <span class="comment">如果标题有空格，需要用引号标注</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">产生静态页面</span></div><div class="line">     <span class="literal">-</span><span class="comment">d</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span> <span class="comment">产生页面的同时发布网页</span></div><div class="line">     <span class="literal">-</span><span class="comment">w</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span>  <span class="comment">查看文件变化</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">publish</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">发布一个模板</span>  <span class="comment">draft</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">server</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">启动hexo本地服务</span></div><div class="line">     <span class="literal">-</span><span class="comment">p</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">port</span>     <span class="comment">指定端口</span></div><div class="line">     <span class="literal">-</span><span class="comment">s</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">static</span>   <span class="comment">只发布静态文件</span></div><div class="line">     <span class="literal">-</span><span class="comment">l</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">log</span>      <span class="comment">开启logger</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">deploy</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">发布站点</span></div><div class="line">     <span class="literal">-</span><span class="comment">g</span>       <span class="comment">先产生静态文件</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">render</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">渲染文件</span> </div><div class="line"><span class="comment">hexo</span> <span class="comment">migrate</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">迁移到其他blog系统</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">list</span>     <span class="literal">-</span><span class="literal">-</span><span class="comment">列出指定内容</span> </div><div class="line">          <span class="comment">post</span></div><div class="line">          <span class="comment">page</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">safe</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">禁用插件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">slient</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">禁止输出信息</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">config</span> <span class="comment">custom</span><span class="string">.</span><span class="comment">yml</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">指定配置文件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">cwd</span>    <span class="literal">-</span><span class="literal">-</span><span class="comment">指定工作目录</span></div></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/16/Hexo搭建及配置/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
+<h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><p>```<br>mkdir /data/vol<br>virsh pool-define-as vmdisk –type dir –target /data/vol<br>virsh pool-build vmdisk </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/高性能Mysql笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/高性能Mysql笔记/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>show global status<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">threads_running</div><div class="line">threads_connected</div><div class="line">questions</div><div class="line">queries</div><div class="line">```</div></pre></td></tr></table></figure></p>
+<p>mysqladmin ext -i1 | awk ‘<br>/Queries/{q=$4-qp;qp=$4}<br>/Threads_connected/{tc=$4}<br>/Threads_running/{printf “%5d %5d %5d\n”,q,tc,$4}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>mysqladmin -uroot -p -h127.0.0.1 -P3306 -r -i 1 ext |\<br>awk -F”|” ‘{\<br>  if($2 ~ /Variable_name/){\<br>    print “ &lt;————-    “  strftime(“%H:%M:%S”) “    ————-&gt;”;\<br>  }\<br>  if($2 ~ /Questions|Queries|Innodb_rows|Com_select |Com_insert |Com_update |Com_delete |Innodb_buffer_pool_read_requests/)\<br>    print $2 $3;\<br>}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>mysqladmin -P3306 -uroot -p -h127.0.0.1 -r -i 1 ext |\<br>awk -F”|” \<br>“BEGIN{ count=0; }”\<br>‘{ if($2 ~ /Variable_name/ &amp;&amp; ((++count)%20 == 1)){\<br>    print “———-|———|— MySQL Command Status –|—– Innodb row operation —-|– Buffer Pool Read –”;\<br>    print “—Time—|—QPS—|select insert update delete|  read inserted updated deleted|   logical    physical”;\<br>}\<br>else if ($2 ~ /Queries/){queries=$3;}\<br>else if ($2 ~ /Com_select /){com_select=$3;}\<br>else if ($2 ~ /Com_insert /){com_insert=$3;}\<br>else if ($2 ~ /Com_update /){com_update=$3;}\<br>else if ($2 ~ /Com_delete /){com_delete=$3;}\<br>else if ($2 ~ /Innodb_rows_read/){innodb_rows_read=$3;}\<br>else if ($2 ~ /Innodb_rows_deleted/){innodb_rows_deleted=$3;}\<br>else if ($2 ~ /Innodb_rows_inserted/){innodb_rows_inserted=$3;}\<br>else if ($2 ~ /Innodb_rows_updated/){innodb_rows_updated=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_read_requests/){innodb_lor=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_reads/){innodb_phr=$3;}\<br>else if ($2 ~ /Uptime / &amp;&amp; count &gt;= 2){\<br>  printf(“ %s |%9d”,strftime(“%H:%M:%S”),queries);\<br>  printf(“|%6d %6d %6d %6d”,com_select,com_insert,com_update,com_delete);\<br>  printf(“|%6d %8d %7d %7d”,innodb_rows_read,innodb_rows_inserted,innodb_rows_updated,innodb_rows_deleted);\<br>  printf(“|%10d %11d\n”,innodb_lor,innodb_phr);\<br>}}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>mysql -u root -p -e ‘show processlist \G’ | grep State | uniq -c | sort -rn </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Python自动化模块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Python自动化模块/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="Python自动化运维"><a href="#Python自动化运维" class="headerlink" title="Python自动化运维"></a>Python自动化运维</h3><p>psutil模块<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="comment">//pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gz</span></div><div class="line">tar -xzvf psutil-<span class="number">2.0</span>.<span class="number">0</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div><div class="line">cd psutil-<span class="number">2.0</span>.<span class="number">0</span></div><div class="line">python setup<span class="selector-class">.py</span> install</div></pre></td></tr></table></figure></p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> psutil</div><div class="line"><span class="title">mem</span>=psutil.virtual_memory()</div><div class="line"><span class="title">mem</span>.total,mem.used</div></pre></td></tr></table></figure>
+<p>import psutil<br>psutil.cpu_times(percpu=True)<br>psutil.disk_usage(‘/‘)<br>psutil.disk_partitions()<br>psutil.net_io_counters()<br>psutil.pids()<br>psutil.users()</p>
+<p>import psutil,datetime<br>datetime.datetime.fromtimestamp(psutil.boot_time()).strftime(“%Y-%m-%d %H:%M:%S”)</p>
+<p>psutil.pids()<br>psutil.Process()<br>p=psutil.Process(222)<br>p.name()<br>p.exe()<br>p.cwd()<br>p.status()<br>p.create_time()<br>p.uids()<br>p.gids()<br>p.cpu_times()<br>p.cpu_affinity()<br>p.memory_percert()<br>p.memory_info()<br>p.io_counters()<br>p.connections()</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Sql server镜像/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Sql server镜像/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="镜像数据库"><a href="#镜像数据库" class="headerlink" title="镜像数据库"></a>镜像数据库</h2><ol>
+<li>主体库</li>
+<li>镜像库</li>
+<li>见证服务器</li>
+<li>运行模式<br>可故障转移的同步模式<br>不可故障转移的同步模式<br>异步模式<br>第一种模式需要见证服务器 </li>
+</ol>
+<p>三种模式的主体服务器均需要运行在完整恢复模式下</p>
+<h3 id="Sql-server三种恢复模式"><a href="#Sql-server三种恢复模式" class="headerlink" title="Sql server三种恢复模式"></a>Sql server三种恢复模式</h3><ol>
+<li>简单恢复模式 checkpoint with truncate log<br>提交完事务截断日志，无法recover in point<br>只能恢复到上一次备份</li>
+<li>完整恢复模式 checkpoint without truncate log<br>提交完日志不截断日志，只有在备份过LOG后才可以截断，可以进行recover in point </li>
+<li>大容量日志恢复模式<br>对于大量数据操作不记录日志，比如bcp、select into、create|rebuild index等 </li>
+</ol>
+<h4 id="设置数据库恢复级别"><a href="#设置数据库恢复级别" class="headerlink" title="设置数据库恢复级别"></a>设置数据库恢复级别</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="keyword">master</span> </div><div class="line"><span class="keyword">go</span> </div><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> hxtest <span class="keyword">set</span> <span class="keyword">recovery</span> <span class="keyword">full</span> <span class="keyword">with</span> no_wait; </div><div class="line">go</div></pre></td></tr></table></figure>
+<p>一个数据库只能有一个镜像库，如果想创建多个镜像可以采用传送日志加镜像的方法</p>
+<h3 id="切换角色"><a href="#切换角色" class="headerlink" title="切换角色"></a>切换角色</h3><ol>
+<li>use master<br>go<br>alter database hxtest set partner failover; </li>
+<li>ssms</li>
+<li>alter database hxtest set force_service_allow_data_loss ;<br>可能丢失数据</li>
+</ol>
+<h3 id="非域环境检查"><a href="#非域环境检查" class="headerlink" title="非域环境检查"></a>非域环境检查</h3><ol>
+<li>Windows 账号。</li>
+<li>网络是否能联通，并且端口可用。</li>
+<li>主体服务器和镜像服务器的磁盘配置是否正确。</li>
+<li>SQL Server版本、补丁是否满足镜像要求。</li>
+<li>SQL Server数据库的恢复模式、兼容级别。</li>
+<li>SQL Server上是否有常规的备份作业，特别是日志备份。</li>
+<li>主体服务器和镜像服务器的SQL Server能否互通。</li>
+<li>主体服务器和镜像服务器中是否有共享文件夹。</li>
+</ol>
+<h4 id="查看文件位置"><a href="#查看文件位置" class="headerlink" title="查看文件位置"></a>查看文件位置</h4><p>use master<br>go<br>select physical_name from<br>sys.master_files<br>where database_id = db_id(‘hxtest’)  </p>
+<h4 id="创建主秘钥"><a href="#创建主秘钥" class="headerlink" title="创建主秘钥"></a>创建主秘钥</h4><p>use master<br>go<br>create master key encrytion by password = ‘circ1815’;</p>
+<h4 id="删除主秘钥"><a href="#删除主秘钥" class="headerlink" title="删除主秘钥"></a>删除主秘钥</h4><p>use master<br>drop master key ; </p>
+<h4 id="创建证书"><a href="#创建证书" class="headerlink" title="创建证书"></a>创建证书</h4><p>use master<br>go<br>create certificate circ_cert<br>with subject = ‘circ_cert’,<br>expiry_date = ‘2020-01-01’;</p>
+<h4 id="删除证书"><a href="#删除证书" class="headerlink" title="删除证书"></a>删除证书</h4><p>use master<br>drop certification circ_cert; </p>
+<h4 id="使用circ-cert证书创建端点"><a href="#使用circ-cert证书创建端点" class="headerlink" title="使用circ_cert证书创建端点"></a>使用circ_cert证书创建端点</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">IF NOT EXISTS ( <span class="keyword">SELECT</span>  <span class="number">1</span>   </div><div class="line">                <span class="keyword">FROM</span>    sys.database_mirroring_endpoints )   </div><div class="line">    <span class="keyword">BEGIN</span>   </div><div class="line">        <span class="keyword">CREATE</span> ENDPOINT [DatabaseMirroring] STATE = STARTED <span class="keyword">AS</span> TCP ( LISTENER_PORT = <span class="number">5022</span>,   </div><div class="line">            LISTENER_IP = ALL ) <span class="keyword">FOR</span> DATABASE_MIRRORING ( <span class="keyword">AUTHENTICATION</span> =   </div><div class="line">            CERTIFICATE circ_certa, ENCRYPTION = <span class="keyword">REQUIRED</span> Algorithm AES, <span class="keyword">ROLE</span> =   </div><div class="line">            ALL );   </div><div class="line">    <span class="keyword">END</span></div></pre></td></tr></table></figure>
+<h4 id="备份证书"><a href="#备份证书" class="headerlink" title="备份证书"></a>备份证书</h4><p>backup certification circ_cert<br>to file ‘d:\data\circ_cert.cert’; </p>
+<h4 id="创建Login"><a href="#创建Login" class="headerlink" title="创建Login"></a>创建Login</h4><p>create login replb with password =’Circ1815’;</p>
+<h4 id="创建user"><a href="#创建user" class="headerlink" title="创建user"></a>创建user</h4><p>create user replb for loging replb; </p>
+<h4 id="使用证书授权用户"><a href="#使用证书授权用户" class="headerlink" title="使用证书授权用户"></a>使用证书授权用户</h4><p>create certificate circ_certb<br>authorization replb<br>from file = ‘c:\data\circ_certb.cert’;</p>
+<h4 id="登录账号授权访问端口"><a href="#登录账号授权访问端口" class="headerlink" title="登录账号授权访问端口"></a>登录账号授权访问端口</h4><p>grant connect on endpoint::[DatabaseMirroring] to [replb]</p>
+<h4 id="设置伙伴服务器"><a href="#设置伙伴服务器" class="headerlink" title="设置伙伴服务器"></a>设置伙伴服务器</h4><p>alter database hxtest set<br>partner = ‘TCP://win1:5022’ ;</p>
+<h3 id="暂停镜像"><a href="#暂停镜像" class="headerlink" title="暂停镜像"></a>暂停镜像</h3><p>alter database hxtest set partner suspend ;<br>alter database hxtest set partner resume ;</p>
+<h3 id="镜像监控"><a href="#镜像监控" class="headerlink" title="镜像监控"></a>镜像监控</h3><ol>
+<li>监控数据存放在dbm_monitor_data表中 </li>
+<li>通过执行sp_dbmmonitorupdate存储过程定期监控 </li>
+<li>镜像监控器 </li>
+<li>exec sp_dbmmonitoresult; </li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Mysql日志格式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Mysql日志格式/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Mysql日志格式"><a href="#Mysql日志格式" class="headerlink" title="Mysql日志格式"></a>Mysql日志格式</h2><h3 id="SBR"><a href="#SBR" class="headerlink" title="SBR"></a>SBR</h3><h3 id="RBR"><a href="#RBR" class="headerlink" title="RBR"></a>RBR</h3><h3 id="Mixed"><a href="#Mixed" class="headerlink" title="Mixed"></a>Mixed</h3><p>Statement模式转Row模式条件：</p>
+<ol>
+<li>语句包含UUID()</li>
+<li>包含auto_increment列的表更新、触发器、存储函数被调用</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Ansible安装配置/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Ansible-安装"><a href="#Ansible-安装" class="headerlink" title="Ansible 安装"></a>Ansible 安装</h2><p>控制主机所需组件：</p>
+<ol>
+<li>Python 2.6及以上版本</li>
+<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
+<li>PyYAML</li>
+<li>Jinja2</li>
+<li>httplib2(http客户端程序库)</li>
+</ol>
+<p>被管节点所需组件：</p>
+<ol>
+<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
+<li>Windows上需安装Powershell 3.0并授权远程管理</li>
+</ol>
+<h3 id="GitHub源码安装"><a href="#GitHub源码安装" class="headerlink" title="GitHub源码安装"></a>GitHub源码安装</h3><p>1.Github源码安装<br>yum install gcc libffi-devel python-devel openssl-devel<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/ansible/ansible.git --recursive </div><div class="line"><span class="keyword">cd</span> ./ansible</div><div class="line"><span class="keyword">source</span> ./hacking/env-setup</div><div class="line">(-q 静默模式)</div></pre></td></tr></table></figure></p>
+<ol>
+<li>需提前安装pip<br>easy_install pip </li>
+<li>安装控制主机需要的模块<br>pip install paramiko PyYAML Jinja2 httplib2 six cryptography</li>
+<li>运行env-setup脚本，ANSIBLE_HOSTS变量可以更改默认资源清单位置</li>
+<li>默认位置为/etc/ansible/hosts</li>
+</ol>
+<h3 id="更新Ansible"><a href="#更新Ansible" class="headerlink" title="更新Ansible"></a>更新Ansible</h3><ol>
+<li>git pull –rebase</li>
+<li>git submodule update –init –recursive<br>更新git中指向自身的模块</li>
+</ol>
+<h3 id="Ansible配置文件查找顺序"><a href="#Ansible配置文件查找顺序" class="headerlink" title="Ansible配置文件查找顺序"></a>Ansible配置文件查找顺序</h3><ol>
+<li>ANSIBLE_CONFIG </li>
+<li>./ansible.cfg</li>
+<li>~/.ansible.cfg</li>
+<li>/etc/ansible/ansible.cfg<br>(Github安装需要copy example目录下的ansible.cfg到相应目录)</li>
+</ol>
+<p>PYTHONPATH=/opt/ansible/lib<br>MANPATH=/opt/ansible/docs/man<br>export PYTHONPATH MANPATH</p>
+<h3 id="初试"><a href="#初试" class="headerlink" title="初试"></a>初试</h3><p>ansible 10.201.241.144 -m ping<br>如果不用密钥验证 需要添加-k 选项<br>需提前安装 sshpass<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m shell -<span class="selector-tag">a</span> <span class="string">'/bin/echo Hello,World!'</span> -<span class="selector-tag">i</span> /root/inventory<span class="selector-class">.cfg</span></div><div class="line">-m module </div><div class="line">-<span class="selector-tag">a</span> args</div></pre></td></tr></table></figure></p>
+<h3 id="列出ansible支持的系统模块"><a href="#列出ansible支持的系统模块" class="headerlink" title="列出ansible支持的系统模块"></a>列出ansible支持的系统模块</h3><p>ansible-doc -l </p>
+<h3 id="显示模块功能"><a href="#显示模块功能" class="headerlink" title="显示模块功能"></a>显示模块功能</h3><p>如shell 模块<br>ansible-doc shell<br>ansible-doc -s 简短描述</p>
+<h3 id="显示执行情况详细信息"><a href="#显示执行情况详细信息" class="headerlink" title="显示执行情况详细信息"></a>显示执行情况详细信息</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ansible -v -vvv</span></div></pre></td></tr></table></figure>
+<h3 id="列出inventory清单"><a href="#列出inventory清单" class="headerlink" title="列出inventory清单"></a>列出inventory清单</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ansible ostest <span class="comment">--list</span></div></pre></td></tr></table></figure>
+<h3 id="查看facts"><a href="#查看facts" class="headerlink" title="查看facts"></a>查看facts</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">setup</span> </div><div class="line">ansible ostest -m <span class="built_in">setup</span> -a <span class="string">'filter=ansible_all_ipv4_addresses'</span></div></pre></td></tr></table></figure>
+<h4 id="查看支持facter"><a href="#查看支持facter" class="headerlink" title="查看支持facter"></a>查看支持facter</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">shell</span> -<span class="keyword">a</span> <span class="string">'rpm -qa ruby-json facter'</span> </div><div class="line">ansible ostest -m facter</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Sql server 2008管理员必备指南笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Sql server 2008管理员必备指南笔记/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Sql-server-2008笔记"><a href="#Sql-server-2008笔记" class="headerlink" title="Sql server 2008笔记"></a>Sql server 2008笔记</h2><h3 id="截断日志"><a href="#截断日志" class="headerlink" title="截断日志"></a>截断日志</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> hxtest <span class="keyword">set</span>  <span class="keyword">recovery</span> simple ;</div><div class="line">dbcc shrinkfile (hxtest_log,1); </div><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> hxtest <span class="keyword">set</span> <span class="keyword">recovery</span> <span class="keyword">full</span> ;</div></pre></td></tr></table></figure>
+<h3 id="Sql-server-支持的网络协议"><a href="#Sql-server-支持的网络协议" class="headerlink" title="Sql server 支持的网络协议"></a>Sql server 支持的网络协议</h3><ol>
+<li>Shared Memory</li>
+<li>Named pipes </li>
+<li>TCP/IP</li>
+<li>VIA协议<br>使用网卡的物理地址和端口号配置Sql server服务<br>多用于局域网</li>
+</ol>
+<h4 id="局域网使用命名管道"><a href="#局域网使用命名管道" class="headerlink" title="局域网使用命名管道"></a>局域网使用命名管道</h4><pre><code>net use \\10.201.241.155\ipc$
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Innodb buffer pool configuration/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Innodb buffer pool configuration/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>innodb_buffer_pool_size </li>
+<li>innodb_buffer_pool_chunk_size</li>
+<li>innodb_buffer_pool_instances</li>
+<li>innodb_old_blocks_pct</li>
+<li>innodb_old_blocks_time</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ceph deploy安装/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Ceph deploy安装/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>yum install -y <a href="https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm" target="_blank" rel="external">https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm</a></p>
+<p>[ceph-noarch]<br>name=Ceph noarch packages<br>baseurl=<a href="https://download.ceph.com/rpm-jewel/el7/noarch" target="_blank" rel="external">https://download.ceph.com/rpm-jewel/el7/noarch</a><br>enabled=1<br>gpgcheck=1<br>type=rpm-md<br>gpgkey=<a href="https://download.ceph.com/keys/release.asc" target="_blank" rel="external">https://download.ceph.com/keys/release.asc</a></p>
+<p>yum update &amp;&amp; yum install ceph-deploy -y<br>yum install ntp </p>
+<p>echo “ceph ALL = (root) NOPASSWD:ALL” | tee /etc/sudoers.d/ceph<br>chmod 440 /etc/sudoers.d/ceph</p>
+<p>visudo Defaults:ceph !requiretty</p>
+<p>mkdir myceph<br>cd myceph</p>
+<p>ceph-deploy purgedata (nodexxx,nodexxx)<br>ceph-deploy forgetkeys </p>
+<p>ceph-deploy purge (nodexxx,nodexxx)</p>
+<p>osd pool default size = 2</p>
+<p>yum install snappy leveldb gdisk python-argparse gperftools-libs<br>yum install python-itsdangerous python-rbd python-rados redhat-lsb-core python-jinja2 hdparm</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ceph笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Ceph笔记/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="ceph笔记"><a href="#ceph笔记" class="headerlink" title="ceph笔记"></a>ceph笔记</h2><h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>OSD – Object Storage Device </p>
+<ol>
+<li>负责数据存储、复制、平衡数据分布等功能</li>
+<li>提交一些信息给Monitor,比如OSD心跳等</li>
+<li>一个集群中至少需要两个OSD保障active+clean健康状态和双副本（默认）数据</li>
+</ol>
+<p>Monitor</p>
+<ol>
+<li>维护整个集群的健康状态</li>
+<li>包含Monitor Map、OSD Map、PG（placemant group) Map和Crush map </li>
+</ol>
+<p>MDS – Metadata Server</p>
+<ol>
+<li>主要保存Ceph文件系统的元数据</li>
+<li>块存储、对象存储都不需要MDS</li>
+</ol>
+<p>至少一个Monitor和至少两个OSD,运行Ceph文件系统的客户端需要使用<br>MDS</p>
+<h3 id="Ceph功能"><a href="#Ceph功能" class="headerlink" title="Ceph功能"></a>Ceph功能</h3><ol>
+<li>RADOSGW(Reliable、Autonomic、Distributed、Object Storage Gateway)<br>功能基于Libradosgw，提供RESTful协议的网关，兼容S3和Swift接口，可以对接网盘及HLS流媒体应用等</li>
+<li>raw 提供裸设备 基于librados，通过Librbd创建一个裸设备,通过qemu或者kvm附加到VM上</li>
+<li>文件系统</li>
+</ol>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>可以通过两种方式安装：1、ceph-deploy工具自动安装 2、手动安装各种组件 </p>
+
+          
         
       
     </div>
@@ -449,6 +1641,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -491,7 +1687,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
