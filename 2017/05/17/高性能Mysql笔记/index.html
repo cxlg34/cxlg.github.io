@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="title: 高性能Mysql笔记date: 2017-05-17 14:10:00update: 2017-05-17 14:10:00tags:categories:    - Mysql笔记12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -">
+<meta name="description" content="12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -i1 | awk &apos;/Queries/&amp;#123;q=$4-qp;qp=$4&amp;#125;/Threads_connected/&amp;#123;tc=$4&amp;#125;/Threads_running/&amp;#">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记忆博客">
+<meta property="og:title" content="高性能Mysql笔记">
 <meta property="og:url" content="http://www.cxlg34.com/2017/05/17/高性能Mysql笔记/index.html">
 <meta property="og:site_name" content="记忆博客">
-<meta property="og:description" content="title: 高性能Mysql笔记date: 2017-05-17 14:10:00update: 2017-05-17 14:10:00tags:categories:    - Mysql笔记12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -">
-<meta property="og:updated_time" content="2017-05-17T06:05:07.011Z">
+<meta property="og:description" content="12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -i1 | awk &apos;/Queries/&amp;#123;q=$4-qp;qp=$4&amp;#125;/Threads_connected/&amp;#123;tc=$4&amp;#125;/Threads_running/&amp;#">
+<meta property="og:updated_time" content="2017-05-17T06:13:18.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记忆博客">
-<meta name="twitter:description" content="title: 高性能Mysql笔记date: 2017-05-17 14:10:00update: 2017-05-17 14:10:00tags:categories:    - Mysql笔记12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -">
+<meta name="twitter:title" content="高性能Mysql笔记">
+<meta name="twitter:description" content="12345678910111213show global status threads_runningthreads_connectedquestionsqueries mysqladmin ext -i1 | awk &apos;/Queries/&amp;#123;q=$4-qp;qp=$4&amp;#125;/Threads_connected/&amp;#123;tc=$4&amp;#125;/Threads_running/&amp;#">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>  | 记忆博客 </title>
+  <title> 高性能Mysql笔记 | 记忆博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -317,7 +317,7 @@
             
             
               
-                
+                高性能Mysql笔记
               
             
           </h1>
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T14:10:00+08:00">
                 2017-05-17
               </time>
             
@@ -342,6 +342,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mysql笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">Mysql笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -368,9 +390,7 @@
       
 
       
-        <hr>
-<p>title: 高性能Mysql笔记<br>date: 2017-05-17 14:10:00<br>update: 2017-05-17 14:10:00<br>tags:<br>categories:</p>
-<h2 id="Mysql笔记"><a href="#Mysql笔记" class="headerlink" title="   - Mysql笔记"></a>   - Mysql笔记</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">show global status </div><div class="line">threads_running</div><div class="line">threads_connected</div><div class="line">questions</div><div class="line">queries </div><div class="line"></div><div class="line">mysqladmin ext -i1 | awk '</div><div class="line">/Queries/&#123;q=$4-qp;qp=$4&#125;</div><div class="line">/Threads_connected/&#123;tc=$4&#125;</div><div class="line">/Threads_running/&#123;printf "%5d %5d %5d\n",q,tc,$4&#125;' </div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">&lt;!--more--&gt;</span></div></pre></td></tr></table></figure>
+        <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">show global status </div><div class="line">threads_running</div><div class="line">threads_connected</div><div class="line">questions</div><div class="line">queries </div><div class="line"></div><div class="line">mysqladmin ext -i1 | awk '</div><div class="line">/Queries/&#123;q=$4-qp;qp=$4&#125;</div><div class="line">/Threads_connected/&#123;tc=$4&#125;</div><div class="line">/Threads_running/&#123;printf "%5d %5d %5d\n",q,tc,$4&#125;' </div><div class="line">``` </div><div class="line"></div><div class="line"><span class="comment">&lt;!--more--&gt;</span></div></pre></td></tr></table></figure>
 <p>mysqladmin -uroot -p -h127.0.0.1 -P3306 -r -i 1 ext |\<br>awk -F”|” ‘{\<br>  if($2 ~ /Variable_name/){\<br>    print “ &lt;————-    “  strftime(“%H:%M:%S”) “    ————-&gt;”;\<br>  }\<br>  if($2 ~ /Questions|Queries|Innodb_rows|Com_select |Com_insert |Com_update |Com_delete |Innodb_buffer_pool_read_requests/)\<br>    print $2 $3;\<br>}’</p>
 <p>mysqladmin -P3306 -uroot -p -h127.0.0.1 -r -i 1 ext |\<br>awk -F”|” \<br>“BEGIN{ count=0; }”\<br>‘{ if($2 ~ /Variable_name/ &amp;&amp; ((++count)%20 == 1)){\<br>    print “———-|———|— MySQL Command Status –|—– Innodb row operation —-|– Buffer Pool Read –”;\<br>    print “—Time—|—QPS—|select insert update delete|  read inserted updated deleted|   logical    physical”;\<br>}\<br>else if ($2 ~ /Queries/){queries=$3;}\<br>else if ($2 ~ /Com_select /){com_select=$3;}\<br>else if ($2 ~ /Com_insert /){com_insert=$3;}\<br>else if ($2 ~ /Com_update /){com_update=$3;}\<br>else if ($2 ~ /Com_delete /){com_delete=$3;}\<br>else if ($2 ~ /Innodb_rows_read/){innodb_rows_read=$3;}\<br>else if ($2 ~ /Innodb_rows_deleted/){innodb_rows_deleted=$3;}\<br>else if ($2 ~ /Innodb_rows_inserted/){innodb_rows_inserted=$3;}\<br>else if ($2 ~ /Innodb_rows_updated/){innodb_rows_updated=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_read_requests/){innodb_lor=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_reads/){innodb_phr=$3;}\<br>else if ($2 ~ /Uptime / &amp;&amp; count &gt;= 2){\<br>  printf(“ %s |%9d”,strftime(“%H:%M:%S”),queries);\<br>  printf(“|%6d %6d %6d %6d”,com_select,com_insert,com_update,com_delete);\<br>  printf(“|%6d %8d %7d %7d”,innodb_rows_read,innodb_rows_inserted,innodb_rows_updated,innodb_rows_deleted);\<br>  printf(“|%10d %11d\n”,innodb_lor,innodb_phr);\<br>}}’</p>
 <p>mysql -u root -p -e ‘show processlist \G’ | grep State | uniq -c | sort -rn<br>```</p>
@@ -469,17 +489,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -505,7 +516,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -550,22 +561,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mysql笔记"><span class="nav-number">1.</span> <span class="nav-text">   - Mysql笔记</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
