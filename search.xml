@@ -25,13 +25,6 @@
     
     <entry>
       <title></title>
-      <url>%2F2017%2F05%2F17%2FMysql%E6%97%A5%E5%BF%97%E6%A0%BC%E5%BC%8F%2F</url>
-      <content type="text"><![CDATA[Mysql日志格式SBRRBRMixedStatement模式转Row模式条件： 语句包含UUID() 包含auto_increment列的表更新、触发器、存储函数被调用]]></content>
-    </entry>
-
-    
-    <entry>
-      <title></title>
       <url>%2F2017%2F05%2F17%2FSql%20server%202008%E7%AE%A1%E7%90%86%E5%91%98%E5%BF%85%E5%A4%87%E6%8C%87%E5%8D%97%E7%AC%94%E8%AE%B0%2F</url>
       <content type="text"><![CDATA[Sql server 2008笔记截断日志123alter database hxtest set recovery simple ;dbcc shrinkfile (hxtest_log,1); alter database hxtest set recovery full ; Sql server 支持的网络协议 Shared Memory Named pipes TCP/IP VIA协议使用网卡的物理地址和端口号配置Sql server服务多用于局域网 局域网使用命名管道net use \\10.201.241.155\ipc$]]></content>
     </entry>
@@ -59,16 +52,16 @@
 
     
     <entry>
-      <title><![CDATA[Python自动化运维]]></title>
-      <url>%2F2017%2F05%2F17%2FPython%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A8%A1%E5%9D%97%2F</url>
-      <content type="text"><![CDATA[psutil模块1234wget https://pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gztar -xzvf psutil-2.0.0.tar.gzcd psutil-2.0.0python setup.py install 123import psutilmem=psutil.virtual_memory()mem.total,mem.used import psutilpsutil.cpu_times(percpu=True)psutil.disk_usage(‘/‘)psutil.disk_partitions()psutil.net_io_counters()psutil.pids()psutil.users() import psutil,datetimedatetime.datetime.fromtimestamp(psutil.boot_time()).strftime(“%Y-%m-%d %H:%M:%S”) psutil.pids()psutil.Process()p=psutil.Process(222)p.name()p.exe()p.cwd()p.status()p.create_time()p.uids()p.gids()p.cpu_times()p.cpu_affinity()p.memory_percert()p.memory_info()p.io_counters()p.connections()]]></content>
+      <title><![CDATA[Ansible安装]]></title>
+      <url>%2F2017%2F05%2F17%2FAnsible%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
+      <content type="text"><![CDATA[控制主机所需组件： Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库) 被管节点所需组件： Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.0并授权远程管理 GitHub源码安装1.Github源码安装yum install gcc libffi-devel python-devel openssl-devel1234git clone git://github.com/ansible/ansible.git --recursive cd ./ansiblesource ./hacking/env-setup(-q 静默模式) 需提前安装pipeasy_install pip 安装控制主机需要的模块pip install paramiko PyYAML Jinja2 httplib2 six cryptography 运行env-setup脚本，ANSIBLE_HOSTS变量可以更改默认资源清单位置 默认位置为/etc/ansible/hosts 更新Ansible git pull –rebase git submodule update –init –recursive更新git中指向自身的模块 Ansible配置文件查找顺序 ANSIBLE_CONFIG ./ansible.cfg ~/.ansible.cfg /etc/ansible/ansible.cfg(Github安装需要copy example目录下的ansible.cfg到相应目录) PYTHONPATH=/opt/ansible/libMANPATH=/opt/ansible/docs/manexport PYTHONPATH MANPATH 初试ansible 10.201.241.144 -m ping如果不用密钥验证 需要添加-k 选项需提前安装 sshpass123ansible ostest -m shell -a '/bin/echo Hello,World!' -i /root/inventory.cfg-m module -a args 列出ansible支持的系统模块ansible-doc -l 显示模块功能如shell 模块ansible-doc shellansible-doc -s 简短描述 显示执行情况详细信息1ansible -v -vvv 列出inventory清单1ansible ostest --list 查看facts12ansible ostest -m setup ansible ostest -m setup -a 'filter=ansible_all_ipv4_addresses' 查看支持facter12ansible ostest -m shell -a 'rpm -qa ruby-json facter' ansible ostest -m facter]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[Ansible安装]]></title>
-      <url>%2F2017%2F05%2F17%2FAnsible%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE%2F</url>
-      <content type="text"><![CDATA[控制主机所需组件： Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库) 被管节点所需组件： Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.0并授权远程管理 GitHub源码安装1.Github源码安装yum install gcc libffi-devel python-devel openssl-devel1234git clone git://github.com/ansible/ansible.git --recursive cd ./ansiblesource ./hacking/env-setup(-q 静默模式) 需提前安装pipeasy_install pip 安装控制主机需要的模块pip install paramiko PyYAML Jinja2 httplib2 six cryptography 运行env-setup脚本，ANSIBLE_HOSTS变量可以更改默认资源清单位置 默认位置为/etc/ansible/hosts 更新Ansible git pull –rebase git submodule update –init –recursive更新git中指向自身的模块 Ansible配置文件查找顺序 ANSIBLE_CONFIG ./ansible.cfg ~/.ansible.cfg /etc/ansible/ansible.cfg(Github安装需要copy example目录下的ansible.cfg到相应目录) PYTHONPATH=/opt/ansible/libMANPATH=/opt/ansible/docs/manexport PYTHONPATH MANPATH 初试ansible 10.201.241.144 -m ping如果不用密钥验证 需要添加-k 选项需提前安装 sshpass123ansible ostest -m shell -a '/bin/echo Hello,World!' -i /root/inventory.cfg-m module -a args 列出ansible支持的系统模块ansible-doc -l 显示模块功能如shell 模块ansible-doc shellansible-doc -s 简短描述 显示执行情况详细信息1ansible -v -vvv 列出inventory清单1ansible ostest --list 查看facts12ansible ostest -m setup ansible ostest -m setup -a 'filter=ansible_all_ipv4_addresses' 查看支持facter12ansible ostest -m shell -a 'rpm -qa ruby-json facter' ansible ostest -m facter]]></content>
+      <title><![CDATA[Python自动化运维]]></title>
+      <url>%2F2017%2F05%2F17%2FPython%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A8%A1%E5%9D%97%2F</url>
+      <content type="text"><![CDATA[psutil模块1234wget https://pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gztar -xzvf psutil-2.0.0.tar.gzcd psutil-2.0.0python setup.py install 123import psutilmem=psutil.virtual_memory()mem.total,mem.used import psutilpsutil.cpu_times(percpu=True)psutil.disk_usage(‘/‘)psutil.disk_partitions()psutil.net_io_counters()psutil.pids()psutil.users() import psutil,datetimedatetime.datetime.fromtimestamp(psutil.boot_time()).strftime(“%Y-%m-%d %H:%M:%S”) psutil.pids()psutil.Process()p=psutil.Process(222)p.name()p.exe()p.cwd()p.status()p.create_time()p.uids()p.gids()p.cpu_times()p.cpu_affinity()p.memory_percert()p.memory_info()p.io_counters()p.connections()]]></content>
     </entry>
 
     

@@ -718,131 +718,6 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Mysql日志格式/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/17/Mysql日志格式/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
-                2017-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Mysql日志格式"><a href="#Mysql日志格式" class="headerlink" title="Mysql日志格式"></a>Mysql日志格式</h2><h3 id="SBR"><a href="#SBR" class="headerlink" title="SBR"></a>SBR</h3><h3 id="RBR"><a href="#RBR" class="headerlink" title="RBR"></a>RBR</h3><h3 id="Mixed"><a href="#Mixed" class="headerlink" title="Mixed"></a>Mixed</h3><p>Statement模式转Row模式条件：</p>
-<ol>
-<li>语句包含UUID()</li>
-<li>包含auto_increment列的表更新、触发器、存储函数被调用</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Sql server 2008管理员必备指南笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1393,6 +1268,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Ansible安装配置/" itemprop="url">
+                  Ansible安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T00:00:00+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ansible/" itemprop="url" rel="index">
+                    <span itemprop="name">Ansible</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>控制主机所需组件：</p>
+<ol>
+<li>Python 2.6及以上版本</li>
+<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
+<li>PyYAML</li>
+<li>Jinja2</li>
+<li>httplib2(http客户端程序库)</li>
+</ol>
+<p>被管节点所需组件：</p>
+<ol>
+<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
+<li>Windows上需安装Powershell 3.0并授权远程管理</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/17/Ansible安装配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Python自动化模块/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1551,7 +1585,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/04/16/Hexo搭建及配置/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="从心来过">
@@ -1573,8 +1607,8 @@
             
               
                 
-                <a class="post-title-link" href="/2017/05/17/Ansible安装配置/" itemprop="url">
-                  Ansible安装
+                <a class="post-title-link" href="/2017/04/16/Hexo搭建及配置/" itemprop="url">
+                  Hexo搭建及配置
                 </a>
               
             
@@ -1590,8 +1624,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T00:00:00+08:00">
-                2017-05-17
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-16T18:41:57+08:00">
+                2017-04-16
               </time>
             
 
@@ -1613,8 +1647,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ansible/" itemprop="url" rel="index">
-                    <span itemprop="name">Ansible</span>
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/install/" itemprop="url" rel="index">
+                    <span itemprop="name">install</span>
                   </a>
                 </span>
 
@@ -1649,22 +1694,11 @@
 
       
         
-          <p>控制主机所需组件：</p>
-<ol>
-<li>Python 2.6及以上版本</li>
-<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
-<li>PyYAML</li>
-<li>Jinja2</li>
-<li>httplib2(http客户端程序库)</li>
-</ol>
-<p>被管节点所需组件：</p>
-<ol>
-<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
-<li>Windows上需安装Powershell 3.0并授权远程管理</li>
-</ol>
+          <h2 id="安装Node-js-Git-Hexo"><a href="#安装Node-js-Git-Hexo" class="headerlink" title="安装Node.js Git Hexo"></a>安装Node.js Git Hexo</h2><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">npm <span class="keyword">install</span> hexo -g </div><div class="line">hexo init</div></pre></td></tr></table></figure>
+<h2 id="Hexo常用命令"><a href="#Hexo常用命令" class="headerlink" title="Hexo常用命令"></a>Hexo常用命令</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="comment">hexo</span> <span class="comment">init</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">初始化站点</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">new</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">发布新文章</span> <span class="comment">如果标题有空格，需要用引号标注</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">generate</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">产生静态页面</span></div><div class="line">     <span class="literal">-</span><span class="comment">d</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">deploy</span> <span class="comment">产生页面的同时发布网页</span></div><div class="line">     <span class="literal">-</span><span class="comment">w</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">watch</span>  <span class="comment">查看文件变化</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">publish</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">发布一个模板</span>  <span class="comment">draft</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">server</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">启动hexo本地服务</span></div><div class="line">     <span class="literal">-</span><span class="comment">p</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">port</span>     <span class="comment">指定端口</span></div><div class="line">     <span class="literal">-</span><span class="comment">s</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">static</span>   <span class="comment">只发布静态文件</span></div><div class="line">     <span class="literal">-</span><span class="comment">l</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">log</span>      <span class="comment">开启logger</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">deploy</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">发布站点</span></div><div class="line">     <span class="literal">-</span><span class="comment">g</span>       <span class="comment">先产生静态文件</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">render</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">渲染文件</span> </div><div class="line"><span class="comment">hexo</span> <span class="comment">migrate</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">迁移到其他blog系统</span></div><div class="line"><span class="comment">hexo</span> <span class="comment">list</span>     <span class="literal">-</span><span class="literal">-</span><span class="comment">列出指定内容</span> </div><div class="line">          <span class="comment">post</span></div><div class="line">          <span class="comment">page</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">safe</span>   <span class="literal">-</span><span class="literal">-</span><span class="comment">禁用插件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">slient</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">禁止输出信息</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">config</span> <span class="comment">custom</span><span class="string">.</span><span class="comment">yml</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">指定配置文件</span></div><div class="line"><span class="comment">hexo</span> <span class="literal">-</span><span class="literal">-</span><span class="comment">cwd</span>    <span class="literal">-</span><span class="literal">-</span><span class="comment">指定工作目录</span></div></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/05/17/Ansible安装配置/#more" rel="contents">
+            <a class="btn" href="/2017/04/16/Hexo搭建及配置/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1704,10 +1738,6 @@
   </section>
 
   
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
 
 
           </div>
@@ -1750,7 +1780,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
