@@ -374,11 +374,11 @@
         
           
             <hr>
-<p>title: KVM常用命令<br>categories: </p>
+<p>title: KVM常用命令<br>date: 2017-05-17<br>categories: </p>
 <pre><code>- KVM
 </code></pre><hr>
 <h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
-<h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><p>```<br>mkdir /data/vol<br>virsh pool-define-as vmdisk –type dir –target /data/vol<br>virsh pool-build vmdisk </p>
+<h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-define-as vmdisk --<span class="built_in">type</span> <span class="built_in">dir</span> --target /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-build vmdisk</div></pre></td></tr></table></figure>
 
           
         

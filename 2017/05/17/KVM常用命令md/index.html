@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="title: KVM常用命令categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池```mkdir /data/volvirsh pool-define-as vmdisk –type dir –target /data/volvirsh pool-bu">
+<meta name="description" content="title: KVM常用命令date: 2017-05-17categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池123mkdir /data/vol virsh pool-define-as vmdisk --type dir --target /da">
 <meta name="keywords">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记忆博客">
 <meta property="og:url" content="http://www.cxlg34.com/2017/05/17/KVM常用命令md/index.html">
 <meta property="og:site_name" content="记忆博客">
-<meta property="og:description" content="title: KVM常用命令categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池```mkdir /data/volvirsh pool-define-as vmdisk –type dir –target /data/volvirsh pool-bu">
-<meta property="og:updated_time" content="2017-05-17T05:54:55.864Z">
+<meta property="og:description" content="title: KVM常用命令date: 2017-05-17categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池123mkdir /data/vol virsh pool-define-as vmdisk --type dir --target /da">
+<meta property="og:updated_time" content="2017-05-17T05:56:06.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记忆博客">
-<meta name="twitter:description" content="title: KVM常用命令categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池```mkdir /data/volvirsh pool-define-as vmdisk –type dir –target /data/volvirsh pool-bu">
+<meta name="twitter:description" content="title: KVM常用命令date: 2017-05-17categories:  - KVM  KVM常用命令编辑、备份XML文件12virsh edit ostest1virsh dumpxml ostest1 &amp;gt; /kvmdump/ 创建存储池123mkdir /data/vol virsh pool-define-as vmdisk --type dir --target /da">
 
 
 
@@ -369,11 +369,11 @@
 
       
         <hr>
-<p>title: KVM常用命令<br>categories: </p>
+<p>title: KVM常用命令<br>date: 2017-05-17<br>categories: </p>
 <pre><code>- KVM
 </code></pre><hr>
 <h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
-<h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><p>```<br>mkdir /data/vol<br>virsh pool-define-as vmdisk –type dir –target /data/vol<br>virsh pool-build vmdisk </p>
+<h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">mkdir</span> /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-define-as vmdisk --<span class="built_in">type</span> <span class="built_in">dir</span> --target /data/<span class="built_in">vol</span> </div><div class="line">virsh pool-build vmdisk</div></pre></td></tr></table></figure>
 
       
     </div>
