@@ -4,15 +4,21 @@
 
     
   <url>
-    <loc>http://www.cxlg34.com/2017/05/17/KVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4md/</loc>
-    <lastmod>2017-05-17T05:09:18.335Z</lastmod>
+    <loc>http://www.cxlg34.com/2017/05/17/Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A8%A1%E5%9D%97/</loc>
+    <lastmod>2017-05-17T05:52:50.535Z</lastmod>
     <data>
         <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.779Z</pubTime>
+        <title>Python自动化运维</title>
+        <pubTime>2017-05-16T16:00:00.000Z</pubTime>
         
          
            
+             
+              <breadCrumb title="Python" url="http://www.cxlg34.com/categories/Python/"/>
+          
+             
+              <breadCrumb title="自动化运维" url="http://www.cxlg34.com/categories/Python/%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4/"/>
+          
         </display>
     </data>
     </url>
@@ -20,7 +26,7 @@
     
   <url>
     <loc>http://www.cxlg34.com/2017/05/17/%E9%AB%98%E6%80%A7%E8%83%BDMysql%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-05-03T10:53:23.144Z</lastmod>
+    <lastmod>2017-05-17T05:51:56.408Z</lastmod>
     <data>
         <display>
         <title></title>
@@ -34,12 +40,48 @@
 
     
   <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%A8%A1%E5%9D%97/</loc>
-    <lastmod>2017-05-03T09:59:16.956Z</lastmod>
+    <loc>http://www.cxlg34.com/2017/05/17/Ansible%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2017-05-17T05:50:42.190Z</lastmod>
+    <data>
+        <display>
+        <title>Ansible安装</title>
+        <pubTime>2017-05-16T16:00:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Ansible" url="http://www.cxlg34.com/categories/Ansible/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cxlg34.com/2017/05/17/Ceph%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-05-17T05:49:16.087Z</lastmod>
+    <data>
+        <display>
+        <title>ceph笔记</title>
+        <pubTime>2017-05-17T05:33:58.681Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Ceph" url="http://www.cxlg34.com/categories/Ceph/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.cxlg34.com/2017/05/17/KVM%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4md/</loc>
+    <lastmod>2017-05-17T05:47:53.711Z</lastmod>
     <data>
         <display>
         <title></title>
-        <pubTime>2017-05-17T05:33:58.764Z</pubTime>
+        <pubTime>2017-05-17T05:33:58.779Z</pubTime>
         
          
            
@@ -70,21 +112,6 @@
         <display>
         <title></title>
         <pubTime>2017-05-17T05:33:58.757Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Ansible%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2017-04-28T09:31:18.907Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.750Z</pubTime>
         
          
            
@@ -159,50 +186,5 @@
     </url>
 
     
-  <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Ceph%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-04-17T07:17:32.470Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.681Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
     
-    
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Hexo%20commands/</loc>
-    <lastmod>2017-04-14T10:16:48.392Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.663Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Nodejs%20Hexo%20Git%20Install/</loc>
-    <lastmod>2017-04-13T10:27:50.794Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.612Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
 </urlset>

@@ -373,7 +373,11 @@
       
         
           
-            <h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
+            <hr>
+<p>title : KVM常用命令<br>categories : </p>
+<pre><code>- KVM
+</code></pre><hr>
+<h2 id="KVM常用命令"><a href="#KVM常用命令" class="headerlink" title="KVM常用命令"></a>KVM常用命令</h2><h3 id="编辑、备份XML文件"><a href="#编辑、备份XML文件" class="headerlink" title="编辑、备份XML文件"></a>编辑、备份XML文件</h3><figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">virsh edit ostest1</div><div class="line">virsh dumpxml ostest1 &gt; <span class="regexp">/kvmdump/</span></div></pre></td></tr></table></figure>
 <h2 id="创建存储池"><a href="#创建存储池" class="headerlink" title="创建存储池"></a>创建存储池</h2><p>```<br>mkdir /data/vol<br>virsh pool-define-as vmdisk –type dir –target /data/vol<br>virsh pool-build vmdisk </p>
 
           
@@ -495,136 +499,15 @@
       
         
           
-            <p>show global status<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">threads_running</div><div class="line">threads_connected</div><div class="line">questions</div><div class="line">queries</div><div class="line">```</div></pre></td></tr></table></figure></p>
+            <hr>
+<p>title : 高性能Mysql笔记<br>date : 2017-05-17<br>categories :</p>
+<pre><code>- Mysql笔记
+</code></pre><hr>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">show</span> <span class="keyword">global</span> <span class="keyword">status</span> </div><div class="line">threads_running</div><div class="line">threads_connected</div><div class="line">questions</div><div class="line">queries</div><div class="line"><span class="string">``</span><span class="string">`</span></div></pre></td></tr></table></figure>
 <p>mysqladmin ext -i1 | awk ‘<br>/Queries/{q=$4-qp;qp=$4}<br>/Threads_connected/{tc=$4}<br>/Threads_running/{printf “%5d %5d %5d\n”,q,tc,$4}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
 <p>mysqladmin -uroot -p -h127.0.0.1 -P3306 -r -i 1 ext |\<br>awk -F”|” ‘{\<br>  if($2 ~ /Variable_name/){\<br>    print “ &lt;————-    “  strftime(“%H:%M:%S”) “    ————-&gt;”;\<br>  }\<br>  if($2 ~ /Questions|Queries|Innodb_rows|Com_select |Com_insert |Com_update |Com_delete |Innodb_buffer_pool_read_requests/)\<br>    print $2 $3;\<br>}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
 <p>mysqladmin -P3306 -uroot -p -h127.0.0.1 -r -i 1 ext |\<br>awk -F”|” \<br>“BEGIN{ count=0; }”\<br>‘{ if($2 ~ /Variable_name/ &amp;&amp; ((++count)%20 == 1)){\<br>    print “———-|———|— MySQL Command Status –|—– Innodb row operation —-|– Buffer Pool Read –”;\<br>    print “—Time—|—QPS—|select insert update delete|  read inserted updated deleted|   logical    physical”;\<br>}\<br>else if ($2 ~ /Queries/){queries=$3;}\<br>else if ($2 ~ /Com_select /){com_select=$3;}\<br>else if ($2 ~ /Com_insert /){com_insert=$3;}\<br>else if ($2 ~ /Com_update /){com_update=$3;}\<br>else if ($2 ~ /Com_delete /){com_delete=$3;}\<br>else if ($2 ~ /Innodb_rows_read/){innodb_rows_read=$3;}\<br>else if ($2 ~ /Innodb_rows_deleted/){innodb_rows_deleted=$3;}\<br>else if ($2 ~ /Innodb_rows_inserted/){innodb_rows_inserted=$3;}\<br>else if ($2 ~ /Innodb_rows_updated/){innodb_rows_updated=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_read_requests/){innodb_lor=$3;}\<br>else if ($2 ~ /Innodb_buffer_pool_reads/){innodb_phr=$3;}\<br>else if ($2 ~ /Uptime / &amp;&amp; count &gt;= 2){\<br>  printf(“ %s |%9d”,strftime(“%H:%M:%S”),queries);\<br>  printf(“|%6d %6d %6d %6d”,com_select,com_insert,com_update,com_delete);\<br>  printf(“|%6d %8d %7d %7d”,innodb_rows_read,innodb_rows_inserted,innodb_rows_updated,innodb_rows_deleted);\<br>  printf(“|%10d %11d\n”,innodb_lor,innodb_phr);\<br>}}’<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
-<p>mysql -u root -p -e ‘show processlist \G’ | grep State | uniq -c | sort -rn </p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Python自动化模块/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/17/Python自动化模块/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
-                2017-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="Python自动化运维"><a href="#Python自动化运维" class="headerlink" title="Python自动化运维"></a>Python自动化运维</h3><p>psutil模块<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="comment">//pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gz</span></div><div class="line">tar -xzvf psutil-<span class="number">2.0</span>.<span class="number">0</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div><div class="line">cd psutil-<span class="number">2.0</span>.<span class="number">0</span></div><div class="line">python setup<span class="selector-class">.py</span> install</div></pre></td></tr></table></figure></p>
-<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> psutil</div><div class="line"><span class="title">mem</span>=psutil.virtual_memory()</div><div class="line"><span class="title">mem</span>.total,mem.used</div></pre></td></tr></table></figure>
-<p>import psutil<br>psutil.cpu_times(percpu=True)<br>psutil.disk_usage(‘/‘)<br>psutil.disk_partitions()<br>psutil.net_io_counters()<br>psutil.pids()<br>psutil.users()</p>
-<p>import psutil,datetime<br>datetime.datetime.fromtimestamp(psutil.boot_time()).strftime(“%Y-%m-%d %H:%M:%S”)</p>
-<p>psutil.pids()<br>psutil.Process()<br>p=psutil.Process(222)<br>p.name()<br>p.exe()<br>p.cwd()<br>p.status()<br>p.create_time()<br>p.uids()<br>p.gids()<br>p.cpu_times()<br>p.cpu_affinity()<br>p.memory_percert()<br>p.memory_info()<br>p.io_counters()<br>p.connections()</p>
+<p>mysql -u root -p -e ‘show processlist \G’ | grep State | uniq -c | sort -rn<br>```</p>
 
           
         
@@ -918,164 +801,6 @@
 <li>语句包含UUID()</li>
 <li>包含auto_increment列的表更新、触发器、存储函数被调用</li>
 </ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="从心来过">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="记忆博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/17/Ansible安装配置/" itemprop="url">
-                  未命名
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
-                2017-05-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Ansible-安装"><a href="#Ansible-安装" class="headerlink" title="Ansible 安装"></a>Ansible 安装</h2><p>控制主机所需组件：</p>
-<ol>
-<li>Python 2.6及以上版本</li>
-<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
-<li>PyYAML</li>
-<li>Jinja2</li>
-<li>httplib2(http客户端程序库)</li>
-</ol>
-<p>被管节点所需组件：</p>
-<ol>
-<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
-<li>Windows上需安装Powershell 3.0并授权远程管理</li>
-</ol>
-<h3 id="GitHub源码安装"><a href="#GitHub源码安装" class="headerlink" title="GitHub源码安装"></a>GitHub源码安装</h3><p>1.Github源码安装<br>yum install gcc libffi-devel python-devel openssl-devel<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/ansible/ansible.git --recursive </div><div class="line"><span class="keyword">cd</span> ./ansible</div><div class="line"><span class="keyword">source</span> ./hacking/env-setup</div><div class="line">(-q 静默模式)</div></pre></td></tr></table></figure></p>
-<ol>
-<li>需提前安装pip<br>easy_install pip </li>
-<li>安装控制主机需要的模块<br>pip install paramiko PyYAML Jinja2 httplib2 six cryptography</li>
-<li>运行env-setup脚本，ANSIBLE_HOSTS变量可以更改默认资源清单位置</li>
-<li>默认位置为/etc/ansible/hosts</li>
-</ol>
-<h3 id="更新Ansible"><a href="#更新Ansible" class="headerlink" title="更新Ansible"></a>更新Ansible</h3><ol>
-<li>git pull –rebase</li>
-<li>git submodule update –init –recursive<br>更新git中指向自身的模块</li>
-</ol>
-<h3 id="Ansible配置文件查找顺序"><a href="#Ansible配置文件查找顺序" class="headerlink" title="Ansible配置文件查找顺序"></a>Ansible配置文件查找顺序</h3><ol>
-<li>ANSIBLE_CONFIG </li>
-<li>./ansible.cfg</li>
-<li>~/.ansible.cfg</li>
-<li>/etc/ansible/ansible.cfg<br>(Github安装需要copy example目录下的ansible.cfg到相应目录)</li>
-</ol>
-<p>PYTHONPATH=/opt/ansible/lib<br>MANPATH=/opt/ansible/docs/man<br>export PYTHONPATH MANPATH</p>
-<h3 id="初试"><a href="#初试" class="headerlink" title="初试"></a>初试</h3><p>ansible 10.201.241.144 -m ping<br>如果不用密钥验证 需要添加-k 选项<br>需提前安装 sshpass<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m shell -<span class="selector-tag">a</span> <span class="string">'/bin/echo Hello,World!'</span> -<span class="selector-tag">i</span> /root/inventory<span class="selector-class">.cfg</span></div><div class="line">-m module </div><div class="line">-<span class="selector-tag">a</span> args</div></pre></td></tr></table></figure></p>
-<h3 id="列出ansible支持的系统模块"><a href="#列出ansible支持的系统模块" class="headerlink" title="列出ansible支持的系统模块"></a>列出ansible支持的系统模块</h3><p>ansible-doc -l </p>
-<h3 id="显示模块功能"><a href="#显示模块功能" class="headerlink" title="显示模块功能"></a>显示模块功能</h3><p>如shell 模块<br>ansible-doc shell<br>ansible-doc -s 简短描述</p>
-<h3 id="显示执行情况详细信息"><a href="#显示执行情况详细信息" class="headerlink" title="显示执行情况详细信息"></a>显示执行情况详细信息</h3><figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">ansible -v -vvv</span></div></pre></td></tr></table></figure>
-<h3 id="列出inventory清单"><a href="#列出inventory清单" class="headerlink" title="列出inventory清单"></a>列出inventory清单</h3><figure class="highlight ada"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ansible ostest <span class="comment">--list</span></div></pre></td></tr></table></figure>
-<h3 id="查看facts"><a href="#查看facts" class="headerlink" title="查看facts"></a>查看facts</h3><figure class="highlight arduino"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">setup</span> </div><div class="line">ansible ostest -m <span class="built_in">setup</span> -a <span class="string">'filter=ansible_all_ipv4_addresses'</span></div></pre></td></tr></table></figure>
-<h4 id="查看支持facter"><a href="#查看支持facter" class="headerlink" title="查看支持facter"></a>查看支持facter</h4><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ansible ostest -m <span class="built_in">shell</span> -<span class="keyword">a</span> <span class="string">'rpm -qa ruby-json facter'</span> </div><div class="line">ansible ostest -m facter</div></pre></td></tr></table></figure>
 
           
         
@@ -1527,7 +1252,7 @@
               
                 
                 <a class="post-title-link" href="/2017/05/17/Ceph笔记/" itemprop="url">
-                  未命名
+                  ceph笔记
                 </a>
               
             
@@ -1553,6 +1278,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ceph/" itemprop="url" rel="index">
+                    <span itemprop="name">Ceph</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -1581,7 +1328,7 @@
       
         
           
-            <h2 id="ceph笔记"><a href="#ceph笔记" class="headerlink" title="ceph笔记"></a>ceph笔记</h2><h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>OSD – Object Storage Device </p>
+            <h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><p>OSD – Object Storage Device </p>
 <ol>
 <li>负责数据存储、复制、平衡数据分布等功能</li>
 <li>提交一些信息给Monitor,比如OSD心跳等</li>
@@ -1606,6 +1353,323 @@
 <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>可以通过两种方式安装：1、ceph-deploy工具自动安装 2、手动安装各种组件 </p>
 
           
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Python自动化模块/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Python自动化模块/" itemprop="url">
+                  Python自动化运维
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T00:00:00+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/自动化运维/" itemprop="url" rel="index">
+                    <span itemprop="name">自动化运维</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="psutil模块"><a href="#psutil模块" class="headerlink" title="psutil模块"></a>psutil模块</h3><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget https:<span class="comment">//pypi.python.org/packages/source/p/psutil/psutil-2.0.0.tar.gz</span></div><div class="line">tar -xzvf psutil-<span class="number">2.0</span>.<span class="number">0</span><span class="selector-class">.tar</span><span class="selector-class">.gz</span></div><div class="line">cd psutil-<span class="number">2.0</span>.<span class="number">0</span></div><div class="line">python setup<span class="selector-class">.py</span> install</div></pre></td></tr></table></figure>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> psutil</div><div class="line"><span class="title">mem</span>=psutil.virtual_memory()</div><div class="line"><span class="title">mem</span>.total,mem.used</div></pre></td></tr></table></figure>
+<p>import psutil<br>psutil.cpu_times(percpu=True)<br>psutil.disk_usage(‘/‘)<br>psutil.disk_partitions()<br>psutil.net_io_counters()<br>psutil.pids()<br>psutil.users()</p>
+<p>import psutil,datetime<br>datetime.datetime.fromtimestamp(psutil.boot_time()).strftime(“%Y-%m-%d %H:%M:%S”)</p>
+<p>psutil.pids()<br>psutil.Process()<br>p=psutil.Process(222)<br>p.name()<br>p.exe()<br>p.cwd()<br>p.status()<br>p.create_time()<br>p.uids()<br>p.gids()<br>p.cpu_times()<br>p.cpu_affinity()<br>p.memory_percert()<br>p.memory_info()<br>p.io_counters()<br>p.connections()</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.cxlg34.com/2017/05/17/Ansible安装配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="从心来过">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="记忆博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/17/Ansible安装配置/" itemprop="url">
+                  Ansible安装
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T00:00:00+08:00">
+                2017-05-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ansible/" itemprop="url" rel="index">
+                    <span itemprop="name">Ansible</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>控制主机所需组件：</p>
+<ol>
+<li>Python 2.6及以上版本</li>
+<li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
+<li>PyYAML</li>
+<li>Jinja2</li>
+<li>httplib2(http客户端程序库)</li>
+</ol>
+<p>被管节点所需组件：</p>
+<ol>
+<li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
+<li>Windows上需安装Powershell 3.0并授权远程管理</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/05/17/Ansible安装配置/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1687,7 +1751,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1698,7 +1762,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>

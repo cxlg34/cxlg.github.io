@@ -89,17 +89,17 @@
 
 
 
-<meta name="description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
+<meta name="description" content="控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.0并授权远程管理">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记忆博客">
+<meta property="og:title" content="Ansible安装">
 <meta property="og:url" content="http://www.cxlg34.com/2017/05/17/Ansible安装配置/index.html">
 <meta property="og:site_name" content="记忆博客">
-<meta property="og:description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
-<meta property="og:updated_time" content="2017-04-28T09:31:18.907Z">
+<meta property="og:description" content="控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.0并授权远程管理">
+<meta property="og:updated_time" content="2017-05-17T05:50:42.190Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记忆博客">
-<meta name="twitter:description" content="Ansible 安装控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.">
+<meta name="twitter:title" content="Ansible安装">
+<meta name="twitter:description" content="控制主机所需组件：  Python 2.6及以上版本 paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2) PyYAML Jinja2 httplib2(http客户端程序库)  被管节点所需组件：  Python 2.4及以上版本(低于2.5需安装python-simplejson) Windows上需安装Powershell 3.0并授权远程管理">
 
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>  | 记忆博客 </title>
+  <title> Ansible安装 | 记忆博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -317,7 +317,7 @@
             
             
               
-                
+                Ansible安装
               
             
           </h1>
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T00:00:00+08:00">
                 2017-05-17
               </time>
             
@@ -342,6 +342,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ansible/" itemprop="url" rel="index">
+                    <span itemprop="name">Ansible</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -368,7 +390,7 @@
       
 
       
-        <h2 id="Ansible-安装"><a href="#Ansible-安装" class="headerlink" title="Ansible 安装"></a>Ansible 安装</h2><p>控制主机所需组件：</p>
+        <p>控制主机所需组件：</p>
 <ol>
 <li>Python 2.6及以上版本</li>
 <li>paramiko模块(Python连接模块 需安装PyCrypto模块(加密) 支持SSHv2)</li>
@@ -381,6 +403,7 @@
 <li>Python 2.4及以上版本(低于2.5需安装python-simplejson)</li>
 <li>Windows上需安装Powershell 3.0并授权远程管理</li>
 </ol>
+<a id="more"></a>
 <h3 id="GitHub源码安装"><a href="#GitHub源码安装" class="headerlink" title="GitHub源码安装"></a>GitHub源码安装</h3><p>1.Github源码安装<br>yum install gcc libffi-devel python-devel openssl-devel<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">git clone gi<span class="variable">t:</span>//github.<span class="keyword">com</span>/ansible/ansible.git --recursive </div><div class="line"><span class="keyword">cd</span> ./ansible</div><div class="line"><span class="keyword">source</span> ./hacking/env-setup</div><div class="line">(-q 静默模式)</div></pre></td></tr></table></figure></p>
 <ol>
 <li>需提前安装pip<br>easy_install pip </li>
@@ -442,8 +465,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/17/Mysql日志格式/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2017/05/17/Ceph笔记/" rel="next" title="ceph笔记">
+                <i class="fa fa-chevron-left"></i> ceph笔记
               </a>
             
           </div>
@@ -452,8 +475,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/17/Sql server 2008管理员必备指南笔记/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/17/Python自动化模块/" rel="prev" title="Python自动化运维">
+                Python自动化运维 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -526,7 +549,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -537,7 +560,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -592,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ansible-安装"><span class="nav-number">1.</span> <span class="nav-text">Ansible 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub源码安装"><span class="nav-number">1.1.</span> <span class="nav-text">GitHub源码安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新Ansible"><span class="nav-number">1.2.</span> <span class="nav-text">更新Ansible</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible配置文件查找顺序"><span class="nav-number">1.3.</span> <span class="nav-text">Ansible配置文件查找顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初试"><span class="nav-number">1.4.</span> <span class="nav-text">初试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出ansible支持的系统模块"><span class="nav-number">1.5.</span> <span class="nav-text">列出ansible支持的系统模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示模块功能"><span class="nav-number">1.6.</span> <span class="nav-text">显示模块功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示执行情况详细信息"><span class="nav-number">1.7.</span> <span class="nav-text">显示执行情况详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出inventory清单"><span class="nav-number">1.8.</span> <span class="nav-text">列出inventory清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看facts"><span class="nav-number">1.9.</span> <span class="nav-text">查看facts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看支持facter"><span class="nav-number">1.9.1.</span> <span class="nav-text">查看支持facter</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub源码安装"><span class="nav-number">1.</span> <span class="nav-text">GitHub源码安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新Ansible"><span class="nav-number">2.</span> <span class="nav-text">更新Ansible</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ansible配置文件查找顺序"><span class="nav-number">3.</span> <span class="nav-text">Ansible配置文件查找顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#初试"><span class="nav-number">4.</span> <span class="nav-text">初试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出ansible支持的系统模块"><span class="nav-number">5.</span> <span class="nav-text">列出ansible支持的系统模块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示模块功能"><span class="nav-number">6.</span> <span class="nav-text">显示模块功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#显示执行情况详细信息"><span class="nav-number">7.</span> <span class="nav-text">显示执行情况详细信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列出inventory清单"><span class="nav-number">8.</span> <span class="nav-text">列出inventory清单</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看facts"><span class="nav-number">9.</span> <span class="nav-text">查看facts</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看支持facter"><span class="nav-number">9.1.</span> <span class="nav-text">查看支持facter</span></a></li></ol></li></ol></div>
             
 
           </div>
