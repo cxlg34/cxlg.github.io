@@ -4,8 +4,26 @@
 
     
   <url>
+    <loc>http://www.cxlg34.com/2017/05/17/Sql%20server%E9%95%9C%E5%83%8F/</loc>
+    <lastmod>2017-05-17T06:16:09.040Z</lastmod>
+    <data>
+        <display>
+        <title>Sql server镜像</title>
+        <pubTime>2017-05-17T06:10:00.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Sqlserver" url="http://www.cxlg34.com/categories/Sqlserver/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.cxlg34.com/2017/05/17/%E9%AB%98%E6%80%A7%E8%83%BDMysql%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-05-17T06:13:18.976Z</lastmod>
+    <lastmod>2017-05-17T06:14:28.593Z</lastmod>
     <data>
         <display>
         <title>高性能Mysql笔记</title>
@@ -14,7 +32,7 @@
          
            
              
-              <breadCrumb title="Mysql笔记" url="http://www.cxlg34.com/categories/Mysql%E7%AC%94%E8%AE%B0/"/>
+              <breadCrumb title="Mysql" url="http://www.cxlg34.com/categories/Mysql/"/>
           
         </display>
     </data>
@@ -91,21 +109,6 @@
              
               <breadCrumb title="Ceph" url="http://www.cxlg34.com/categories/Ceph/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.cxlg34.com/2017/05/17/Sql%20server%E9%95%9C%E5%83%8F/</loc>
-    <lastmod>2017-05-02T06:53:26.062Z</lastmod>
-    <data>
-        <display>
-        <title></title>
-        <pubTime>2017-05-17T05:33:58.758Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>

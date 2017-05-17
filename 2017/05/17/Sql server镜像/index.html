@@ -92,13 +92,13 @@
 <meta name="description" content="镜像数据库 主体库 镜像库 见证服务器 运行模式可故障转移的同步模式不可故障转移的同步模式异步模式第一种模式需要见证服务器   三种模式的主体服务器均需要运行在完整恢复模式下 Sql server三种恢复模式 简单恢复模式 checkpoint with truncate log提交完事务截断日志，无法recover in point只能恢复到上一次备份 完整恢复模式 checkpoint wit">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记忆博客">
+<meta property="og:title" content="Sql server镜像">
 <meta property="og:url" content="http://www.cxlg34.com/2017/05/17/Sql server镜像/index.html">
 <meta property="og:site_name" content="记忆博客">
 <meta property="og:description" content="镜像数据库 主体库 镜像库 见证服务器 运行模式可故障转移的同步模式不可故障转移的同步模式异步模式第一种模式需要见证服务器   三种模式的主体服务器均需要运行在完整恢复模式下 Sql server三种恢复模式 简单恢复模式 checkpoint with truncate log提交完事务截断日志，无法recover in point只能恢复到上一次备份 完整恢复模式 checkpoint wit">
-<meta property="og:updated_time" content="2017-05-02T06:53:26.062Z">
+<meta property="og:updated_time" content="2017-05-17T06:16:09.040Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记忆博客">
+<meta name="twitter:title" content="Sql server镜像">
 <meta name="twitter:description" content="镜像数据库 主体库 镜像库 见证服务器 运行模式可故障转移的同步模式不可故障转移的同步模式异步模式第一种模式需要见证服务器   三种模式的主体服务器均需要运行在完整恢复模式下 Sql server三种恢复模式 简单恢复模式 checkpoint with truncate log提交完事务截断日志，无法recover in point只能恢复到上一次备份 完整恢复模式 checkpoint wit">
 
 
@@ -133,7 +133,7 @@
 
 
 
-  <title>  | 记忆博客 </title>
+  <title> Sql server镜像 | 记忆博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -317,7 +317,7 @@
             
             
               
-                
+                Sql server镜像
               
             
           </h1>
@@ -332,7 +332,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T13:33:58+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-17T14:10:00+08:00">
                 2017-05-17
               </time>
             
@@ -342,6 +342,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sqlserver/" itemprop="url" rel="index">
+                    <span itemprop="name">Sqlserver</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -378,9 +400,10 @@
 <h3 id="Sql-server三种恢复模式"><a href="#Sql-server三种恢复模式" class="headerlink" title="Sql server三种恢复模式"></a>Sql server三种恢复模式</h3><ol>
 <li>简单恢复模式 checkpoint with truncate log<br>提交完事务截断日志，无法recover in point<br>只能恢复到上一次备份</li>
 <li>完整恢复模式 checkpoint without truncate log<br>提交完日志不截断日志，只有在备份过LOG后才可以截断，可以进行recover in point </li>
-<li>大容量日志恢复模式<br>对于大量数据操作不记录日志，比如bcp、select into、create|rebuild index等 </li>
-</ol>
+<li>大容量日志恢复模式<br>对于大量数据操作不记录日志，比如bcp、select into、create|rebuild index等 <a id="more"></a>
 <h4 id="设置数据库恢复级别"><a href="#设置数据库恢复级别" class="headerlink" title="设置数据库恢复级别"></a>设置数据库恢复级别</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">use</span> <span class="keyword">master</span> </div><div class="line"><span class="keyword">go</span> </div><div class="line"><span class="keyword">alter</span> <span class="keyword">database</span> hxtest <span class="keyword">set</span> <span class="keyword">recovery</span> <span class="keyword">full</span> <span class="keyword">with</span> no_wait; </div><div class="line">go</div></pre></td></tr></table></figure>
+</li>
+</ol>
 <p>一个数据库只能有一个镜像库，如果想创建多个镜像可以采用传送日志加镜像的方法</p>
 <h3 id="切换角色"><a href="#切换角色" class="headerlink" title="切换角色"></a>切换角色</h3><ol>
 <li>use master<br>go<br>alter database hxtest set partner failover; </li>
@@ -547,7 +570,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
